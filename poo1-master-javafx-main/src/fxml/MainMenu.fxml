@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.ControladorVistaMain">
+   <children>
+      <HBox layoutX="300.0" layoutY="39.0" prefHeight="517.0" prefWidth="800.0" styleClass="backgroundColor" stylesheets="@../styles/estilos.css" />
+      <HBox fx:id="panelDatosFondo1" layoutX="173.0" layoutY="44.0" prefHeight="510.0" prefWidth="200.0" style="-fx-background-color: #6d83bd;" />
+      <VBox layoutY="43.0" prefHeight="510.0" prefWidth="253.0" style="-fx-background-color: #42bff5;">
+         <children>
+            <AnchorPane prefHeight="148.0" prefWidth="253.0">
+               <children>
+                  <ImageView fx:id="fxImagenLaFuerza" fitHeight="95.0" fitWidth="93.0" layoutX="87.0" layoutY="14.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../materiales/logo_lafuerza.png" />
+                     </image>
+                     <effect>
+                        <Reflection fraction="0.54" topOpacity="0.44" />
+                     </effect>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Button fx:id="btnMenu" mnemonicParsing="false" onAction="#hacerClick" prefHeight="39.0" prefWidth="253.0" stylesheets="@../styles/estilos.css" text="Menu" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Light" size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="4.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnEjercicios" mnemonicParsing="false" onAction="#hacerClick" prefHeight="39.0" prefWidth="258.0" stylesheets="@../styles/estilos.css" text="Ejercicios" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Light" size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="4.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnGruposMusculares" mnemonicParsing="false" onAction="#hacerClick" prefHeight="39.0" prefWidth="258.0" stylesheets="@../styles/estilos.css" text="Grupos Musculares" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Light" size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="4.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnRendimientos" mnemonicParsing="false" onAction="#hacerClick" prefHeight="39.0" prefWidth="258.0" stylesheets="@../styles/estilos.css" text="Rendimientos" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Light" size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="4.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnEntrenamientos" mnemonicParsing="false" onAction="#hacerClick" prefHeight="39.0" prefWidth="258.0" stylesheets="@../styles/estilos.css" text="Entrenamientos" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Light" size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="4.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnInfo" mnemonicParsing="false" onAction="#hacerClick" prefHeight="39.0" prefWidth="258.0" stylesheets="@../styles/estilos.css" text="Info" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Light" size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="4.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <HBox layoutX="309.0" layoutY="15.0" prefHeight="30.0" prefWidth="791.0" style="-fx-background-color: #1c1a19;" />
+      <VBox layoutX="273.0" layoutY="45.0" prefHeight="510.0" prefWidth="791.0">
+         <children>
+            <VBox fx:id="panelDatosFondo2" prefHeight="151.0" prefWidth="886.0" style="-fx-background-color: #6d83bd;">
+               <children>
+                  <VBox prefHeight="49.0" prefWidth="791.0">
+                     <children>
+                        <VBox prefHeight="18.0" prefWidth="791.0" />
+                        <Label fx:id="lblInfo" text="/menu/clientes                                 Control y gestión de clientes cargados en el sistema        " textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Button fx:id="btnAñadirCliente" minHeight="0.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="127.0" stylesheets="@../styles/estilos.css" text="Añadir cliente" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Light" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#6e6e6eb2" height="5.93" offsetX="1.0" offsetY="1.0" radius="3.2675" spread="0.03" width="9.14" />
+                     </effect>
+                  </Button>
+                  <Button fx:id="btnAsignarTutor" mnemonicParsing="false" prefHeight="32.0" prefWidth="127.0" stylesheets="@../styles/estilos.css" text="Añadir tutor" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Light" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <effect>
+                        <DropShadow color="#6e6e6eb2" height="5.93" offsetX="1.0" offsetY="1.0" radius="3.2675" spread="0.03" width="9.14" />
+                     </effect>
+                  </Button>
+               </children>
+            </VBox>
+            <StackPane>
+               <children>
+                  <GridPane fx:id="panelEjercicios" prefHeight="315.0" prefWidth="801.0" style="-fx-background-color: #42bff5;">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints maxHeight="318.0" minHeight="10.0" prefHeight="289.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Pane prefHeight="274.0" prefWidth="791.0" GridPane.rowIndex="1">
+                           <children>
+                              <TableView layoutX="325.0" prefHeight="315.0" prefWidth="465.0" stylesheets="@../styles/estilos.css">
+                                <columns>
+                                    <TableColumn prefWidth="144.0" text="NOMBRE DE EJERCICIO" />
+                                    <TableColumn prefWidth="136.0" text="TIEMPO DESCANSO" />
+                                    <TableColumn prefWidth="104.0" text="REPETICIONES" />
+                                    <TableColumn prefWidth="182.0" text="PESO" />
+                                </columns>
+                              </TableView>
+                              <Label layoutX="18.0" layoutY="30.0" prefHeight="19.0" prefWidth="127.0" text="Nombre de ejercicio" textFill="WHITE">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="btnAñadirCliente1" layoutX="17.0" layoutY="255.0" minHeight="0.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="79.0" stylesheets="@../styles/estilos.css" text="Agregar" textFill="WHITE">
+                                 <font>
+                                    <Font name="Calibri Light" size="14.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#726666ab" height="10.62" offsetX="1.0" offsetY="1.0" radius="4.4375" width="9.13" />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="btnAñadirCliente11" layoutX="111.0" layoutY="255.0" minHeight="0.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="79.0" stylesheets="@../styles/estilos.css" text="Editar" textFill="WHITE">
+                                 <font>
+                                    <Font name="Calibri Light" size="14.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#726666ab" height="10.62" offsetX="1.0" offsetY="1.0" radius="4.4375" width="9.13" />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="btnAñadirCliente111" layoutX="211.0" layoutY="255.0" minHeight="0.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="79.0" stylesheets="@../styles/estilos.css" text="Eliminar" textFill="WHITE">
+                                 <font>
+                                    <Font name="Calibri Light" size="14.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#726666ab" height="10.62" offsetX="1.0" offsetY="1.0" radius="4.4375" width="9.13" />
+                                 </effect>
+                              </Button>
+                              <TextField fx:id="campoTextoEjercicio1" layoutX="19.0" layoutY="59.0" prefHeight="25.0" prefWidth="276.0" />
+                              <Label layoutX="17.0" layoutY="95.0" prefHeight="19.0" prefWidth="127.0" text="Tiempo de descanso " textFill="WHITE">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="campoTextoEjercicio11" layoutX="18.0" layoutY="124.0" prefHeight="25.0" prefWidth="120.0" />
+                              <Label layoutX="163.0" layoutY="95.0" prefHeight="19.0" prefWidth="79.0" text="Repeticiones" textFill="WHITE">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="campoTextoEjercicio111" layoutX="163.0" layoutY="124.0" prefHeight="25.0" prefWidth="120.0" />
+                              <Label layoutX="21.0" layoutY="158.0" prefHeight="19.0" prefWidth="79.0" text="Peso " textFill="WHITE">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="campoTextoEjercicio1111" layoutX="21.0" layoutY="187.0" prefHeight="25.0" prefWidth="120.0" />
+                           </children></Pane>
+                     </children>
+                  </GridPane>
+                  <GridPane fx:id="panelGrupoMuscular">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Pane prefHeight="144.0" prefWidth="455.0" style="-fx-background-color: #42bff5;">
+                           <children>
+                              <ComboBox layoutX="27.0" layoutY="133.0" prefHeight="25.0" prefWidth="143.0" />
+                              <TableView layoutX="334.0" layoutY="1.0" prefHeight="315.0" prefWidth="457.0" stylesheets="@../styles/estilos.css">
+                                <columns>
+                                  <TableColumn prefWidth="87.0" text="ID EJERCICIO" />
+                                    <TableColumn prefWidth="151.0" text="NOMBRE EJERCICIO" />
+                                    <TableColumn prefWidth="218.0" text="GRUPO MUSCULAR PERTENECIENTE" />
+                                </columns>
+                              </TableView>
+                              <Label layoutX="27.0" layoutY="25.0" prefHeight="19.0" prefWidth="172.0" text="Nombre grupo muscular" textFill="WHITE">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="btnAñadirCliente12" layoutX="27.0" layoutY="185.0" minHeight="0.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="79.0" stylesheets="@../styles/estilos.css" text="Agregar" textFill="WHITE">
+                                 <font>
+                                    <Font name="Calibri Light" size="14.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#726666ab" height="10.62" offsetX="1.0" offsetY="1.0" radius="4.4375" width="9.13" />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="btnAñadirCliente112" layoutX="126.0" layoutY="185.0" minHeight="0.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="79.0" stylesheets="@../styles/estilos.css" text="Editar" textFill="WHITE">
+                                 <font>
+                                    <Font name="Calibri Light" size="14.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#726666ab" height="10.62" offsetX="1.0" offsetY="1.0" radius="4.4375" width="9.13" />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="btnAñadirCliente1111" layoutX="224.0" layoutY="185.0" minHeight="0.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="79.0" stylesheets="@../styles/estilos.css" text="Eliminar" textFill="WHITE">
+                                 <font>
+                                    <Font name="Calibri Light" size="14.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#726666ab" height="10.62" offsetX="1.0" offsetY="1.0" radius="4.4375" width="9.13" />
+                                 </effect>
+                              </Button>
+                              <TextField fx:id="campoTextoEjercicio12" layoutX="27.0" layoutY="54.0" prefHeight="25.0" prefWidth="276.0" />
+                              <Label layoutX="27.0" layoutY="101.0" prefHeight="19.0" prefWidth="172.0" text="Asignar a ejercicio" textFill="WHITE">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </GridPane>
+                  <GridPane fx:id="panelRendimientos">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #42bff5;">
+                           <children>
+                              <TableView layoutX="271.0" prefHeight="315.0" prefWidth="520.0" stylesheets="@../styles/estilos.css">
+                                <columns>
+                                  <TableColumn prefWidth="75.0" text="ID CLIENTE" />
+                                    <TableColumn prefWidth="117.0" text="NOMBRE CLIENTE" />
+                                    <TableColumn prefWidth="162.0" text="REPETICIONES REALIZADAS" />
+                                    <TableColumn prefWidth="129.0" text="PESO ALCANZADO" />
+                                </columns>
+                              </TableView>
+                              <ComboBox layoutX="22.0" layoutY="69.0" prefHeight="25.0" prefWidth="143.0" />
+                              <Label layoutX="22.0" layoutY="34.0" prefHeight="19.0" prefWidth="99.0" text="Asignar cliente" textFill="WHITE">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="btnAñadirCliente121" layoutX="14.0" layoutY="253.0" minHeight="0.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="79.0" stylesheets="@../styles/estilos.css" text="Agregar" textFill="WHITE">
+                                 <font>
+                                    <Font name="Calibri Light" size="14.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#726666ab" height="10.62" offsetX="1.0" offsetY="1.0" radius="4.4375" width="9.13" />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="btnAñadirCliente1121" layoutX="103.0" layoutY="253.0" minHeight="0.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="79.0" stylesheets="@../styles/estilos.css" text="Editar" textFill="WHITE">
+                                 <font>
+                                    <Font name="Calibri Light" size="14.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#726666ab" height="10.62" offsetX="1.0" offsetY="1.0" radius="4.4375" width="9.13" />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="btnAñadirCliente11111" layoutX="189.0" layoutY="253.0" minHeight="0.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="79.0" stylesheets="@../styles/estilos.css" text="Eliminar" textFill="WHITE">
+                                 <font>
+                                    <Font name="Calibri Light" size="14.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#726666ab" height="10.62" offsetX="1.0" offsetY="1.0" radius="4.4375" width="9.13" />
+                                 </effect>
+                              </Button>
+                              <Label layoutX="23.0" layoutY="104.0" prefHeight="19.0" prefWidth="160.0" text="Repeticiones realizadas" textFill="WHITE">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="23.0" layoutY="133.0" prefHeight="25.0" prefWidth="99.0" />
+                              <Label layoutX="23.0" layoutY="172.0" prefHeight="19.0" prefWidth="160.0" text="Peso alcanzado" textFill="WHITE">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="23.0" layoutY="201.0" prefHeight="25.0" prefWidth="99.0" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </GridPane>
+                  <GridPane fx:id="panelEntrenamientos">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #42bff5;">
+                           <children>
+                              <Label layoutX="28.0" layoutY="33.0" prefHeight="19.0" prefWidth="172.0" text="Semana inicio entrenamiento" textFill="WHITE">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker layoutX="28.0" layoutY="63.0" prefHeight="25.0" prefWidth="127.0" />
+                              <TextField layoutX="28.0" layoutY="124.0" prefHeight="25.0" prefWidth="312.0" />
+                              <Label layoutX="28.0" layoutY="97.0" prefHeight="19.0" prefWidth="172.0" text="Nombre entrenamiento" textFill="WHITE">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="28.0" layoutY="158.0" prefHeight="19.0" prefWidth="160.0" text="Semanas de entrenamiento" textFill="WHITE">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="28.0" layoutY="186.0" prefHeight="25.0" prefWidth="113.0" />
+                              <Label layoutX="28.0" layoutY="219.0" prefHeight="19.0" prefWidth="160.0" text="Calificacion del tutor" textFill="WHITE">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="28.0" layoutY="247.0" prefHeight="25.0" prefWidth="113.0" />
+                              <ComboBox layoutX="213.0" layoutY="63.0" prefHeight="25.0" prefWidth="127.0" />
+                              <Label layoutX="211.0" layoutY="33.0" prefHeight="19.0" prefWidth="99.0" text="Asignar cliente" textFill="WHITE">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="btnAñadirCliente122" layoutX="178.0" layoutY="264.0" minHeight="0.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="79.0" stylesheets="@../styles/estilos.css" text="Agregar" textFill="WHITE">
+                                 <font>
+                                    <Font name="Calibri Light" size="14.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#726666ab" height="10.62" offsetX="1.0" offsetY="1.0" radius="4.4375" width="9.13" />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="btnAñadirCliente1122" layoutX="265.0" layoutY="223.0" minHeight="0.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="79.0" stylesheets="@../styles/estilos.css" text="Editar" textFill="WHITE">
+                                 <font>
+                                    <Font name="Calibri Light" size="14.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#726666ab" height="10.62" offsetX="1.0" offsetY="1.0" radius="4.4375" width="9.13" />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="btnAñadirCliente11112" layoutX="265.0" layoutY="264.0" minHeight="0.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="79.0" stylesheets="@../styles/estilos.css" text="Eliminar" textFill="WHITE">
+                                 <font>
+                                    <Font name="Calibri Light" size="14.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow color="#726666ab" height="10.62" offsetX="1.0" offsetY="1.0" radius="4.4375" width="9.13" />
+                                 </effect>
+                              </Button>
+                              <TableView layoutX="365.0" layoutY="5.0" prefHeight="308.0" prefWidth="426.0" stylesheets="@../styles/estilos.css">
+                                <columns>
+                                  <TableColumn prefWidth="75.0" text="ID CLIENTE" />
+                                    <TableColumn prefWidth="70.0" text="NOMBRE">
+                                       <columns>
+                                          <TableColumn prefWidth="70.0" text="CLIENTE" />
+                                       </columns>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="90.0" text="SEM.INICIO.ENT" />
+                                    <TableColumn prefWidth="97.0" text="SEMANAS DE ENT." />
+                                    <TableColumn prefWidth="90.0" text="CALIFICACIÓN" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </GridPane>
+                  <GridPane fx:id="panelMenu" prefHeight="260.0" prefWidth="791.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+                        <RowConstraints maxHeight="318.0" minHeight="10.0" prefHeight="289.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TableView prefHeight="289.0" prefWidth="715.0" stylesheets="@../styles/estilos.css" GridPane.rowIndex="1">
+                          <columns>
+                            <TableColumn prefWidth="92.0" text="ID" />
+                            <TableColumn prefWidth="109.0" text="DNI" />
+                              <TableColumn prefWidth="124.0" text="NOMBRE" />
+                              <TableColumn minWidth="0.0" prefWidth="112.0" text="APELLIDO" />
+                              <TableColumn prefWidth="123.0" text="FECHA DE INGRESO" />
+                              <TableColumn prefWidth="106.0" text="ESTADO" />
+                              <TableColumn prefWidth="124.0" text="TUTOR" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </GridPane>
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+      <HBox layoutY="-15.0" prefHeight="30.0" prefWidth="1100.0" style="-fx-background-color: #1c1a19;" />
+      <HBox layoutY="15.0" prefHeight="30.0" prefWidth="54.0" style="-fx-background-color: #1c1a19;" />
+      <HBox layoutX="54.0" layoutY="15.0" prefHeight="30.0" prefWidth="414.0" style="-fx-background-color: #1c1a19;">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=" Instituto de asesoría de entrenamiento de fuerza e hipertrofia" wrappingWidth="413.63671875" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
